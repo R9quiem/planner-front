@@ -2,14 +2,16 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { AuthComponent } from './views/auth/auth.component';
-import { TaskListComponent } from './views/task-list/task-list.component';
+import { AuthComponent } from './core/auth/auth.component';
+import { TaskListComponent } from './features/task-list/task-list.component';
+import { HomeComponent } from './features/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
-    TaskListComponent
+    TaskListComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule
