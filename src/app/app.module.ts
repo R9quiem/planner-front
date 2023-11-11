@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { AuthComponent } from './core/auth/auth.component';
 import { TaskListComponent } from './features/task-list/task-list.component';
 import { HomeComponent } from './features/home/home.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HomeComponent } from './features/home/home.component';
     HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
