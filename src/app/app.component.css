@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Jura';
+  src: url("/assets/Jura-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: 'Forum';
+  src: url("/assets/Forum-Regular.ttf");
+}
+
+
 .container {
   width: 100%;
   padding: 15px;
@@ -18,13 +28,35 @@ header {
   background-size: cover;
   float: left;
   margin-left: 5%;
+
 }
-p {
+.text {
   margin-left: 1px;
   text-align: left;
   font-size: 30px;
+  font-family: Jura;
+  font-style: normal;
+  color: #000000;
+  position: relative;
+  right: -50px;
+  top: 10px;
 }
-
+.img1 {
+  background-image: url("/assets/planeta.jpg");
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  float: right;
+  margin-right: 15%;
+  margin-top: 10px;
+}
+.text1{
+  position: relative;
+  right: -40px;
+  bottom: 2px;
+  font-size: 30px;
+  font-family: Jura;
+}
 .button1{
   display: inline-block;
   background: rgba(88, 164, 176, 1);
@@ -35,7 +67,7 @@ p {
   width: 150px;
   border-radius: 20px;
   text-decoration: none;
-  font-family: Tahoma;
+  font-family: Jura;
   font-size: 20px;
   line-height: 1;
   cursor: pointer;
@@ -66,8 +98,13 @@ main {
   margin-top: 10% ;
 }
 .main-heading h3{
-  font-size: 40px;
-  color: rgba(223, 146, 132, 1);
+  font-size: 30px;
+  font-family: Jura;
+  text-align: center;
+  color: #DF9284;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  line-height: 45px;
+
 }
 .button{
   display: inline-block;
@@ -78,7 +115,7 @@ main {
   width: 300px;
   border-radius: 20px;
   text-decoration: none;
-  font-family: Tahoma;
+  font-family: Jura;
   font-size: 25px;
   line-height: 1;
   cursor: pointer;
