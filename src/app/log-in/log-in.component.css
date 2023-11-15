@@ -1,0 +1,10 @@
+main {
+  width: 1700px;
+  height: 800px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  background: linear-gradient(180deg, rgba(223, 146, 132, 0.25) 0%, rgba(88, 164, 176, 0.25) 99.99%, rgba(88, 164, 176, 0.25) 100%);
+  background-size: contain;
+  text-align: center;
+}
