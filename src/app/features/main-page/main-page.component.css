@@ -79,11 +79,11 @@ main{
   background: rgba(55, 63, 81, 0.66);
 }
 .to_add {
-  background-image: url("/assets/dobavit.jpg");
-  width: 90px;
-  height: 90px;
-  background-size: contain;
-  float: left;
+    background-image: url("/assets/dobavit.jpg");
+    width: 90px;
+    height: 90px;
+    background-size: contain;
+    float: left;
   border-radius: 20px ;
 }
 
@@ -150,29 +150,4 @@ main{
   font-family: Jura;
 }
 
-.list {
-  width: 1000px;
-  height: 750px;
-  background: #FFFFFF;
-  border: 2px solid #58A4B0;
-  border-radius: 10px;
-  position: relative;
-  float: right;
-  margin-top: 20px;
-  margin-right: 20px;
-}
-.headerday {
-  width: 1000px;
-  height: 70px;
-  background: rgba(88, 164, 176, 0.85);
-}
-.date {
-  color: white;
-  text-align: left;
-  margin-left: 30px;
-  position: relative;
-  font-size: 25px;
-  font-family: Jura;
-  top: 30px;
-}
 
