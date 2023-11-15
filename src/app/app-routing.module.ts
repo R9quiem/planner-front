@@ -3,6 +3,7 @@
   import {HomeComponent} from "./features/home/home.component";
   import {AuthComponent} from "./core/auth/auth.component";
   import {TaskListComponent} from "./features/task-list/task-list.component";
+  import {AppComponent} from "./app.component";
 
   const routes: Routes = [
     { path: '', component: HomeComponent },
