@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./auth.component.css']
 })
 export class AuthComponent {
+  authType: string = 'login';
 
+  toggleAuthentication() {
+
+  }
 }

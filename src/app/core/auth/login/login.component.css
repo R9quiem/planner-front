@@ -1,0 +1,23 @@
+button {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  background-color: #4CAF50;
+  color: white;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:last-child {
+  background-color: #f44336;
+  margin-right: 0;
+}
+
+button:last-child:hover {
+  background-color: #e53935;
+}

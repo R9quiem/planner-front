@@ -7,10 +7,17 @@
   </header>
 
   <div class = "auth-form-container">
-
     <div class = "picture"></div>
     <div class = "auth-form">
-      ff
+      <div class = "switch-button">
+        <button>
+
+        </button>
+        <button>
+        </button>
+      </div>
+      <a *ngIf="authType === 'register'"><app-register></app-register></a>
+      <a *ngIf="authType === 'login'"><app-login></app-login></a>
     </div>
   </div>
 </div>

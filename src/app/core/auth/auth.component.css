@@ -34,6 +34,9 @@ header {
   display: flex;
   flex-direction: column; /* Устанавливаем направление флекс-контейнера на вертикальное */
    /* Центрируем содержимое вертикально */
+}
+
+.switch-button {
 
 }
 
@@ -46,12 +49,10 @@ header {
 }
 .picture {
   background-image: url("/assets/auth-form-pic.png");
-  width: 35%; /* изменено с 600px на 300px */
+  width: 30%; /* изменено с 600px на 300px */
   height: 80%; /* изменено с 916px на 100% */
   background-size: cover; /* изменено с 50% на cover */
   background-repeat: no-repeat;
-
-
 
 }
 .auth-form {
