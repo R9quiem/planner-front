@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AuthComponent {
   authType: string = 'login';
 
-  toggleAuthentication() {
-
+  setActive(type: string) {
+    this.authType = type;
   }
 }
