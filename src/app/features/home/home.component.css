@@ -1,15 +1,11 @@
-.container {
-  width: 100%;
-  padding: 15px;
-  margin: auto;
-}
 header {
-  width: 1700px;
-  height: 20px;
-  margin-bottom: 10px;
-  position: relative;
+  width: 100%;
+  height: 7%;
+  display: flex;
+  text-align: center;
+  align-items: center;
 }
-.img {
+.main-logo {
   background-image: url("/assets/logo.jpg");
   width: 50px;
   height: 50px;
@@ -19,7 +15,7 @@ header {
   margin-left: 5%;
 
 }
-.text {
+.site-name-text {
   margin-left: 1px;
   text-align: left;
   font-size: 30px;
@@ -30,21 +26,35 @@ header {
   left: 5px;
   top: 10px;
 }
-.img1 {
-  background-image: url("/assets/planeta.jpg");
-  width: 30px;
-  height: 30px;
-  background-size: contain;
-  float: right;
-  margin-right: 15%;
-  margin-top: 10px;
+
+.lang-switch {
+  position: absolute;
+  right: 10%;
+  display: flex;
+  align-items: center;
+}
+.lang-logo {
+  background-image: url("/assets/output-onlinepngtools.png") ;
+  width: 50px;
+  height: 50px;
+  background-size: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /*float: right;*/
+  /*margin-right: 15%;*/
+  /*margin-top: 10px;*/
 }
 .text1{
-  position: relative;
-  right: -40px;
-  bottom: 2px;
-  font-size: 30px;
+  /*position: relative;*/
+  /*right: -40px;*/
+  /*bottom: 2px;*/
+  /*font-size: 30px;*/
+  /*font-family: Jura;*/
+  color: #655F5F;
+  font-size: 36px;
   font-family: Jura;
+  font-weight: 500;
 }
 .button1{
   display: inline-block;
@@ -61,13 +71,12 @@ header {
   line-height: 1;
   cursor: pointer;
   position: absolute;
-  right: 1%;
-  top: 100%;
+  right: 1px;
   text-align: center;
 }
 
 main {
-  width: 1700px;
+  width: 100%;
   height: 800px;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
