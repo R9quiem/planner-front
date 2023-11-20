@@ -46,7 +46,7 @@ header {
   border: none;
   color: #373F51;
   background-color: white;
-  font-size:38px;
+  font-size:42px;
   font-family: Jura;
   font-weight: 500;
   border-bottom: solid 5px white;
@@ -84,4 +84,5 @@ header {
 
 .form {
   margin: 5%;
+  height:84%;
 }

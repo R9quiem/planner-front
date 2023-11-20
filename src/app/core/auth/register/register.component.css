@@ -1,0 +1,45 @@
+button {
+  padding: 8px 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #58A4B0;
+  border-radius: 7px;
+  color: white;
+  margin-right: 10px;
+  align-self: end; /* Располагаем элемент внизу */
+  margin-top: auto; /* Добавляем автоматический отступ сверху для выравнивания внизу */
+  margin-left: auto;
+  font-family: Jura;
+  font-weight: 400;
+  font-size: 25px;
+  bottom: 55px;
+}
+
+
+input {
+  border-radius: 5px;
+  border: solid rgba(55, 63, 81, 0.40) 1px;
+  width: 45%;
+  height: 25px;
+  margin-bottom: 15px;
+  font-size:17px;
+  font-family: sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+label {
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #ffffff;
+  border-radius: 5px;
+  text-align: left;
+  padding: 5px;
+  margin-bottom: 8px;
+  width: fit-content;
+}
