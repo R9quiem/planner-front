@@ -3,21 +3,28 @@ button {
   font-size: 14px;
   cursor: pointer;
   border: none;
-  border-radius: 3px;
-  background-color: #4CAF50;
+  background-color: #58A4B0;
+  border-radius: 7px;
   color: white;
   margin-right: 10px;
+  align-self: flex-end; /* Располагаем элемент внизу */
+  margin-top: auto; /* Добавляем автоматический отступ сверху для выравнивания внизу */
+  margin-left: auto;
 }
 
-button:hover {
-  background-color: #45a049;
+
+input {
+  border-radius: 5px;
+  border: solid rgba(55, 63, 81, 0.40) 1px;
+  width: 40%;
 }
 
-button:last-child {
-  background-color: #f44336;
-  margin-right: 0;
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
-button:last-child:hover {
-  background-color: #e53935;
+label {
+
 }

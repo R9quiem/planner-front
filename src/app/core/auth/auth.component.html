@@ -13,8 +13,8 @@
         <button (click)="setActive('login')" [class.active]="authType === 'login'">Вход</button>
         <button (click)="setActive('register')" [class.active]="authType === 'register'">Регистрация</button>
       </div>
-      <a *ngIf="authType === 'register'"><app-register></app-register></a>
-      <a *ngIf="authType === 'login'"><app-login></app-login></a>
+      <div class = "form" *ngIf="authType === 'register'"><app-register></app-register></div>
+      <div class = "form" *ngIf="authType === 'login'"><app-login></app-login></div>
     </div>
   </div>
 </div>

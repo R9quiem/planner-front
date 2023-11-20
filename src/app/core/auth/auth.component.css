@@ -37,7 +37,7 @@ header {
 
 .switch-buttons {
   display: flex;
-  height: 7%;
+  height: 9%;
 }
 .switch-buttons button {
   width: 50%;
@@ -46,9 +46,9 @@ header {
   border: none;
   color: #373F51;
   background-color: white;
-  font-size:34px;
+  font-size:38px;
   font-family: Jura;
-  font-weight: 400;
+  font-weight: 500;
   border-bottom: solid 5px white;
 }
 
@@ -80,4 +80,8 @@ header {
   width: 35%;
   height: 80%;
   text-align: center;
+}
+
+.form {
+  margin: 5%;
 }
