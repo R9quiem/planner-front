@@ -10,6 +10,8 @@ import { MainPageComponent } from './features/main-page/main-page.component';
 import { MenuComponent } from './features/main-page/menu/menu.component';
 import {RegisterComponent} from "./core/auth/register/register.component";
 import {LoginComponent} from "./core/auth/login/login.component";
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -22,7 +24,12 @@ import {LoginComponent} from "./core/auth/login/login.component";
     MainPageComponent,
     MenuComponent,
   ],
-  imports: [ BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

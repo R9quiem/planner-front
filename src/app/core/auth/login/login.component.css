@@ -46,3 +46,6 @@ label {
   margin-bottom: 8px;
   width: fit-content;
 }
+.error-message {
+  color: red;
+}
