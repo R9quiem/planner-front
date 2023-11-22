@@ -175,4 +175,11 @@ main{
   font-family: Jura;
   top: 30px;
 }
+.image {
+  background-image: url("/assets/todo.jpg");
+  width: 300px;
+  height: 300.63px;
+  background-size: contain ;
+  position: relative;
 
+}
