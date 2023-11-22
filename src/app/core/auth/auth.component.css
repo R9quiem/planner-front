@@ -1,6 +1,6 @@
 header {
   padding-left: 20px;
-  padding-top: 20px;
+  padding-top: 15px;
   display: flex;
   align-items: center;
 }
@@ -64,7 +64,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
 }
 
 .picture {
