@@ -24,7 +24,7 @@ header {
   color: #000000;
   position: relative;
   left: 5px;
-  top: 10px;
+  top: 5px;
 }
 
 .lang-switch {
@@ -71,7 +71,7 @@ header {
   line-height: 1;
   cursor: pointer;
   position: absolute;
-  right: 1px;
+  right: 2%;
   text-align: center;
 }
 
