@@ -1,0 +1,16 @@
+main {
+  width: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  background-size: contain;
+  text-align: center;
+}
+.background-image-main {
+  background-image: url("/assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
