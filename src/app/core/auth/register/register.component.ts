@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {User} from "../models/user";
 import {AuthService} from "../services/auth.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-register',
@@ -8,23 +9,25 @@ import {AuthService} from "../services/auth.service";
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-  user: any = {};
+  user: User = { username: '', email: '', password: '', token: '' };
   errorMessage: any;
-  constructor(private authService: AuthService) { }
+  isLoading = false;
+
+  constructor(private authService: AuthService, private router: Router) { }
   register() {
+    this.isLoading = true;
     this.authService.register(this.user).subscribe(
       response => {
-
         console.log('Registration successful', response);
-        // Сброс ошибки при успешной регистрации
         this.errorMessage = null;
+        this.isLoading = false;
+        this.router.navigate(['/main']);
       },
       error => {
         console.error('Registration failed', error);
-        // Отображение ошибки
         this.errorMessage = 'Ошибка регистрации. Пожалуйста, попробуйте еще раз.';
+        this.isLoading = false;
       }
     );
-    this.errorMessage = "Запрос отправляется";
   }
 }

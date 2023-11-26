@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {AuthService} from "../services/auth.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -7,23 +8,26 @@ import {AuthService} from "../services/auth.service";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  user: any = {};
-  errorMessage: any;
-  constructor(private authService: AuthService) { }
+  user = { username: '', email: '', password: '', token: '' }; // Используем более конкретные типы
+  errorMessage: string | null = null;
+  isLoading = false;
+
+  constructor(private authService: AuthService, private router: Router) { }
+
   login() {
+    this.isLoading = true;
     this.authService.login(this.user).subscribe(
       response => {
-
         console.log('Login successful', response);
-        // Сброс ошибки при успешной регистрации
         this.errorMessage = null;
+        this.isLoading = false;
+        this.router.navigate(['/main']);
       },
       error => {
         console.error('Login failed', error);
-        // Отображение ошибки
         this.errorMessage = 'Ошибка входа. Пожалуйста, попробуйте еще раз.';
+        this.isLoading = false;
       }
     );
-    this.errorMessage = "Запрос отправляется";
   }
 }

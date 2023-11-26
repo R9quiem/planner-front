@@ -4,20 +4,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AuthComponent} from "./core/auth/auth.component";
 import { TaskListComponent} from "./features/task-list/task-list.component";
-import { HomeComponent } from './features/home/home.component';
+import { HomeComponent } from './features/home-page/home.component';
 import { AppRoutingModule} from "./app-routing.module";
 import { MainPageComponent } from './features/main-page/main-page.component';
-import { MenuComponent } from './features/main-page/menu/menu.component';
+import { SidebarComponent } from './features/main-page/shared/sidebar/sidebar.component';
 import {RegisterComponent} from "./core/auth/register/register.component";
 import {LoginComponent} from "./core/auth/login/login.component";
-import { HeaderComponent } from './features/main-page/header/header.component';
-import { TodayComponent } from './features/task-list/today/today.component';
-import {HttpClientModule} from "@angular/common/http";
+import { HeaderComponent } from './features/main-page/shared/header/header.component';
+import { TodayComponent } from './features/task-list/today-tasks-component/today.component';
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
-import { AllTasksComponent } from './features/task-list/all-tasks/all-tasks.component';
-import { CalenderComponent } from './features/task-list/calender/calender.component';
-import { ProjectComponent } from './features/task-list/project/project.component';
-import { BackgroundComponent } from './features/main-page/background/background.component';
+import { AllTasksComponent } from './features/main-page/all-tasks-component/all-tasks.component';
+import { CalenderComponent } from './features/task-list/calender-component/calender.component';
+import { ProjectComponent } from './features/task-list/categories-component/project.component';
+import { BackgroundComponent } from './features/main-page/shared/background/background.component';
+import {AuthInterceptor} from "./core/auth/util/AuthInterceptor";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { BackgroundComponent } from './features/main-page/background/background.
     TaskListComponent,
     HomeComponent,
     MainPageComponent,
-    MenuComponent,
+    SidebarComponent,
     HeaderComponent,
     TodayComponent,
     AllTasksComponent,
@@ -42,7 +43,13 @@ import { BackgroundComponent } from './features/main-page/background/background.
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

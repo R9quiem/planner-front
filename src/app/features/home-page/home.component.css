@@ -4,6 +4,7 @@ header {
   display: flex;
   text-align: center;
   align-items: center;
+
 }
 .main-logo {
   background-image: url("/assets/logotip.jpg");
@@ -16,13 +17,13 @@ header {
 
 }
 .site-name-text {
-  margin-left: 1px;
+  margin-left: 10px;
   text-align: left;
   font-size: 30px;
   font-family: Jura;
   font-style: normal;
+  font-weight: bold;
   color: #000000;
-  position: relative;
   left: 5px;
   top: 5px;
 }
@@ -54,7 +55,7 @@ header {
   color: #655F5F;
   font-size: 36px;
   font-family: Jura;
-  font-weight: 500;
+  font-weight: bold;
 }
 .button1{
   display: inline-block;
@@ -68,6 +69,7 @@ header {
   text-decoration: none;
   font-family: Jura;
   font-size: 25px;
+  font-weight: bold;
   line-height: 1;
   cursor: pointer;
   position: absolute;
@@ -93,13 +95,27 @@ main {
   text-align: center;
   margin-top: 10% ;
   color: #373F51;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.main-heading h1::after {
+
+  content: "";
+  display: block;
+  width: 80%; /* Замените это значение на нужную вам длину */
+  height: 4px; /* Замените это значение на нужную вам толщину */
+  background-color: black; /* Замените это значение на цвет вашей границы */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .main-heading h3{
-  font-size: 30px;
+  font-size: 35px;
   font-family: Jura;
   text-align: center;
   color: #DF9284;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   line-height: 45px;
 
 }
@@ -117,6 +133,7 @@ a{
   line-height: 1;
   cursor: pointer;
   margin-bottom: 50px;
+
 }
 .background-image-home {
   background-image: url("/assets/image 1.jpg");
@@ -124,4 +141,7 @@ a{
   background-position: center;
   background-repeat: no-repeat;
   height: 100%;
+}
+.border {
+
 }

@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AuthComponent {
   authType: string = 'login';
 
+
   setActive(type: string) {
     this.authType = type;
   }

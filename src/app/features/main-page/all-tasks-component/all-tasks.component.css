@@ -1,0 +1,25 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Заставляет компонент растягиваться и занимать доступное пространство */
+}
+.window {
+  background: #FFFFFF;
+  height: 100%;
+  width: 100%;
+  /*border: 2px solid #58A4B0;*/
+  /*border-radius: 10px;*/
+  /*margin-top: 20px;*/
+  /*margin-right: 20px;*/
+
+}
+.header {
+  background: rgba(88, 164, 176, 0.85);
+}
+.date {
+  color: white;
+  text-align: left;
+  font-size: 25px;
+  font-family: Jura;
+  padding: 15px;
+}

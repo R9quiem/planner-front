@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'Jura';
+  src: url("/assets/Jura-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: 'Forum';
+  src: url("/assets/Forum-Regular.ttf");
+}
+
+.sidebar{
+  width: 105px;
+  background: rgba(55, 63, 81, 0.66);
+  border-right: 3px solid rgba(218, 164, 154, 0.62);
+  padding: 10px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  height: 866px;
+}
+.conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Добавлено для выравнивания по центру */
+  text-align: center;
+}
+.sidebar:first-child {
+  padding-top:20px
+}
+button {
+  width: 85px;
+  height: 85px;
+  border-radius: 25px;
+  text-decoration: none;
+  border: 0;
+}
+p{
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-family: Jura;
+  margin-top: 0;
+  font-weight: 500;
+
+}
+.to-all-tasks {
+  background-image: url("/assets/dobavit.jpg");
+  background-size: contain;
+}
+.to-today {
+  background-image: url("/assets/tooday1.jpg");
+  background-size: contain;
+}
+.to-calendar {
+  background-image: url("/assets/calender.jpg");
+  background-size: contain;
+}
+.to-categories {
+  background-image: url("/assets/project.jpg");
+  background-size: contain;
+}
+
+
+
+/*.text\.to-add {*/
+/*  color: white;*/
+/*  font-size: 18px;*/
+/*  white-space: nowrap;*/
+/*  font-family: Jura;*/
+/*}*/
+
+/*.texttoday {*/
+/*  color: white;*/
+/*  font-size: 20px;*/
+/*  font-family: Jura;*/
+/*}*/
+
+/*.textcalendar {*/
+/*  color: white;*/
+/*  font-size: 18px;*/
+/*  font-family: Jura;*/
+/*}*/
+
+/*.textproject {*/
+/*  color: white;*/
+/*  font-size: 20px;*/
+/*  font-family: Jura;*/
+/*}*/
+
+
