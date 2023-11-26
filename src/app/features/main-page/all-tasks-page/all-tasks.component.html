@@ -1,0 +1,14 @@
+<div class = "window">
+  <div class = "header">
+    <div class="date">2 ноября, четверг</div>
+  </div>
+  <div class = "task-list">
+    <div *ngFor="let task of tasks">
+      <!-- Ваш код для отображения каждой задачи -->
+      {{ task.name }} <!-- Предположим, что ваши задачи имеют поле 'name' -->
+    </div>
+
+    <!-- Кнопка "Создать задачу" -->
+    <button (click)="createTask()">Создать задачу</button>
+  </div>
+</div>

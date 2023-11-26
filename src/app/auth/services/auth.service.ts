@@ -14,7 +14,7 @@ export class AuthService {
   private currentUser: User | null = null;
   constructor(private http: HttpClient) {
   }
-  getToken(): string | null {
+  public getToken(): string | null {
     return this.currentUser?.token || null;
   }
 

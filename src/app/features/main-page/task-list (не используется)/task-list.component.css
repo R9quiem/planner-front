@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Jura';
-  src: url("/assets/Jura-VariableFont_wght.ttf");
+  src: url("/src/assets/Jura-VariableFont_wght.ttf");
 }
 @font-face {
   font-family: 'Forum';
-  src: url("/assets/Forum-Regular.ttf");
+  src: url("/src/assets/Forum-Regular.ttf");
 }
 a{color: white; text-decoration: none}
 
@@ -22,7 +22,7 @@ header {
 
 }
 .img {
-  background-image: url("/assets/logotip.jpg");
+  background-image: url("/src/assets/logotip.jpg");
   width: 50px;
   height: 50px;
   background-position: left;
@@ -46,7 +46,7 @@ header {
 
 }
 .img1 {
-  background-image: url("/assets/avatar.jpg");
+  background-image: url("/src/assets/avatar.jpg");
   width: 50px;
   height: 50px;
   background-size: contain;
@@ -68,7 +68,7 @@ main{
   width: 1880px;
   height: 800px;
   margin: 0;
-  background-image: url("/assets/background.jpg");
+  background-image: url("/src/assets/background.jpg");
   background-size: cover;
 }
 .functions{
@@ -79,7 +79,7 @@ main{
   background: rgba(55, 63, 81, 0.66);
 }
 .to_add {
-  background-image: url("/assets/dobavit.jpg");
+  background-image: url("/src/assets/dobavit.jpg");
   width: 90px;
   height: 90px;
   background-size: contain;
@@ -96,7 +96,7 @@ main{
   font-family: Jura;
 }
 .today {
-  background-image: url("/assets/tooday1.jpg");
+  background-image: url("/src/assets/tooday1.jpg");
   width: 90px;
   height: 90px;
   background-size: cover;
@@ -114,7 +114,7 @@ main{
   font-family: Jura;
 }
 .calendar {
-  background-image: url("/assets/calender.jpg");
+  background-image: url("/src/assets/calender.jpg");
   width: 90px;
   height: 90px;
   background-size: cover;
@@ -132,7 +132,7 @@ main{
   font-family: Jura;
 }
 .project {
-  background-image: url("/assets/project.jpg");
+  background-image: url("/src/assets/project.jpg");
   width: 90px;
   height: 90px;
   background-size: cover;
@@ -176,7 +176,7 @@ main{
   top: 30px;
 }
 .image {
-  background-image: url("/assets/todo.jpg");
+  background-image: url("/src/assets/todo.jpg");
   width: 300px;
   height: 300.63px;
   background-size: contain ;
