@@ -4,11 +4,10 @@
   </div>
   <div class = "task-list">
     <div *ngFor="let task of tasks">
-      <!-- Ваш код для отображения каждой задачи -->
-      {{ task.name }} <!-- Предположим, что ваши задачи имеют поле 'name' -->
+      <div>{{ task.name }}</div>
     </div>
 
-    <!-- Кнопка "Создать задачу" -->
+
     <button (click)="createTask()">Создать задачу</button>
   </div>
 </div>

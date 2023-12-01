@@ -17,11 +17,11 @@ export class AllTasksComponent {
   }
 
   loadTasks() {
-    // Используйте ваш URL бэкенда здесь
-    // Выполните GET-запрос
+
     this.http.get<any[]>(this.backendUrl).subscribe(
       (data) => {
         this.tasks = data;
+        console.log(this.tasks);
       },
       (error) => {
         console.error('Error fetching tasks', error);
