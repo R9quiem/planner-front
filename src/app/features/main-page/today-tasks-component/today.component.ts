@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./today.component.css']
 })
 export class TodayComponent {
+  creatingTask: boolean = false;
+  showTaskCreationWindow() {
+    this.creatingTask = true;
+  }
+  closeTaskCreationWindow() {
+    this.creatingTask = false;
+  }
 
 }

@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'Jura';
+  src: url("/assets/Jura-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: 'Forum';
+  src: url("/assets/Forum-Regular.ttf");
+}
+a{color: white; text-decoration: none}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.list {
+  width: 20%;
+  height: 100%;
+  background: #FFFFFF;
+  border: 2px solid #58A4B0;
+  border-radius: 10px;
+  position: relative;
+  float: right;
+  margin-top: 20px;
+  margin-right: 7%;
+  margin-left: 7%;
+}
+.headerday {
+  width: 100%;
+  height: 60px;
+  background: rgba(88, 164, 176, 0.85);
+}
+.date {
+  color: white;
+  text-align: left;
+  margin-left: 30px;
+  position: relative;
+  font-size: 25px;
+  font-family: Jura;
+  top: 20px;
+}
+.list1 {
+  width: 40%;
+  height: 100%;
+  background: #FFFFFF;
+  border: 2px solid #58A4B0;
+  border-radius: 10px;
+  position: relative;
+  left: 50%;
+  bottom: 50%;
+  float: right;
+  margin-top: 20px;
+}
+.headerday1 {
+  width: 100%;
+  height: 60px;
+  background: rgba(88, 164, 176, 0.85);
+}
+.date1 {
+  color: white;
+  text-align: left;
+  margin-left: 30px;
+  position: relative;
+  font-size: 25px;
+  font-family: Jura;
+  top: 20px;
+}

@@ -1,175 +1,33 @@
 @font-face {
   font-family: 'Jura';
-  src: url("/src/assets/Jura-VariableFont_wght.ttf");
+  src: url("/assets/Jura-VariableFont_wght.ttf");
 }
 @font-face {
   font-family: 'Forum';
-  src: url("/src/assets/Forum-Regular.ttf");
+  src: url("/assets/Forum-Regular.ttf");
 }
 a{color: white; text-decoration: none}
 
-.container {
-  padding: 15px;
-  margin: auto;
-}
-header {
-  width: 100%;
-  height: 75px;
-  position: relative;
-  background: rgba(55, 63, 81, 0.66);
-
-}
-.img {
-  background-image: url("/src/assets/logotip.jpg");
-  width: 50px;
-  height: 50px;
-  background-position: left;
-  background-size: cover;
-  float: left;
-  margin-left: 10px;
-  border-radius: 10px;
-
-}
-.textlogo {
-  margin-left: 1px;
-  text-align: left;
-  font-size: 30px;
-  font-family: Jura;
-  font-style: normal;
-  font-weight: bold;
-  color: #000000;
-  position: relative;
-  right: -50px;
-  top: 10px;
-}
-.img1 {
-  background-image: url("/src/assets/avatar.jpg");
-  width: 50px;
-  height: 50px;
-  background-size: contain;
-  float: right;
-  margin-right: 5%;
-  top: 40px;
-  border-radius: 25px;
-}
-.text1{
-  position: relative;
-  left: -80px;
-  top: 10px;
-  font-size: 30px;
-  font-family: Jura;
-  color: white;
-}
-
-main {
-  width: 100%;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: black;
-  background-size: contain;
-  text-align: center;
-}
-
-.background-image-main {
-  background-image: url("/src/assets/background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100%;
-}
-.functions{
-  position: absolute;
-  width: 130px;
-  height: 92%;
-  background: rgba(55, 63, 81, 0.66);
-  border: 3px solid rgba(218, 164, 154, 0.62);
-}
-.to_add {
-  background-image: url("/src/assets/dobavit.jpg");
-  width: 90px;
-  height: 90px;
-  background-size: contain;
-  float: left;
-  border-radius: 20px ;
-}
-
-.text\.to-add {
-  color: white;
-  text-align: center;
-  position: relative;
-  top: 95px;
-  font-size: 18px;
-  white-space: nowrap;
-  font-family: Jura;
-}
-.today {
-  background-image: url("/src/assets/tooday1.jpg");
-  width: 90px;
-  height: 90px;
-  background-size: cover;
-  position: relative;
-  float: left;
-  top: 40px;
-  border-radius: 20px;
-}
-.texttoday {
-  color: white;
-  text-align: center;
-  position: relative;
-  top: 95px;
-  font-size: 20px;
-  font-family: Jura;
-}
-.calendar {
-  background-image: url("/src/assets/calender.jpg");
-  width: 90px;
-  height: 90px;
-  background-size: cover;
-  position: relative;
-  float: left;
-  top: 85px;
-  border-radius: 20px;
-}
-.textcalendar {
-  color: white;
-  text-align: center;
-  position: relative;
-  top: 95px;
-  font-size: 18px;
-  font-family: Jura;
-}
-.project {
-  background-image: url("/src/assets/project.jpg");
-  width: 90px;
-  height: 90px;
-  background-size: cover;
-  position: relative;
-  float: left;
-  top: 130px;
-  border-radius: 20px;
-}
-.textproject {
-  color: white;
-  text-align: center;
-  position: relative;
-  top: 100px;
-  font-size: 20px;
-  font-family: Jura;
+:host {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 .list {
   width: 90%;
-  height: 800px;
+  height: 90%;
   background: #FFFFFF;
   border: 2px solid #58A4B0;
   border-radius: 10px;
   position: relative;
   float: right;
   margin-top: 20px;
-  margin-right: 20px;
+  margin-right: 7%;
+  margin-left: 7%;
 }
 .headerday {
   width: 100%;
-  height: 70px;
+  height: 60px;
   background: rgba(88, 164, 176, 0.85);
 }
 .date {
@@ -179,16 +37,46 @@ main {
   position: relative;
   font-size: 25px;
   font-family: Jura;
-  top: 30px;
+  top: 20px;
 }
-.tk {
-  background-image: url("/src/assets");
-  width: 90px;
-  height: 90px;
-  background-size: cover;
+.image {
+  background-image: url("/assets/todo.jpg");
+  width: 300px;
+  height: 300.63px;
+  background-size: contain ;
   position: relative;
-  float: left;
-  }
-
-
+  margin-left: 40%;
+  margin-right: 10%;
+  margin-top: 5%;
+}
+.text {
+  color: black;
+  position: relative;
+  top: 105%;
+  right: 70%;
+  font-size: 30px;
+  font-weight: bold;
+  white-space: nowrap;
+  font-family: Jura;
+}
+.image-button {
+  height: 80px;
+  width: 80px;
+  background-image: url("/assets/plus.png");
+  background-size: cover;
+  border-radius: 30px;
+  position: relative;
+  margin-left: 48%;
+  margin-right: 20%;
+  top: 140%;
+}
+.text1 {
+  color: black;
+  position: relative;
+  right: 200%;
+  top: 120%;
+  font-size: 20px;
+  white-space: nowrap;
+  font-family: Jura;
+}
 
