@@ -13,50 +13,18 @@ a{color: white; text-decoration: none}
   flex-direction: column;
   flex-grow: 1;
 }
-.list {
-  width: 90%;
-  height: 90%;
-  background: #FFFFFF;
-  border: 2px solid #58A4B0;
-  border-radius: 10px;
-  position: relative;
-  float: right;
-  margin-top: 20px;
-  margin-right: 7%;
-  margin-left: 7%;
-}
-.headerday {
-  width: 100%;
-  height: 60px;
-  background: rgba(88, 164, 176, 0.85);
-}
-.date {
-  color: white;
-  text-align: left;
-  margin-left: 30px;
-  position: relative;
-  font-size: 25px;
-  font-family: Jura;
-  top: 20px;
-}
 .image {
   background-image: url("/assets/todo.jpg");
   width: 300px;
   height: 300.63px;
   background-size: contain ;
-  position: relative;
-  margin-left: 40%;
-  margin-right: 10%;
-  margin-top: 5%;
+  margin-bottom: 20px;
 }
 .text {
+  text-align: center;
   color: black;
-  position: relative;
-  top: 105%;
-  right: 70%;
   font-size: 30px;
   font-weight: bold;
-  white-space: nowrap;
   font-family: Jura;
 }
 .image-button {
@@ -65,18 +33,51 @@ a{color: white; text-decoration: none}
   background-image: url("/assets/plus.png");
   background-size: cover;
   border-radius: 30px;
-  position: relative;
-  margin-left: 48%;
-  margin-right: 20%;
-  top: 140%;
+  margin: 30px;
 }
 .text1 {
   color: black;
-  position: relative;
-  right: 200%;
-  top: 120%;
   font-size: 20px;
   white-space: nowrap;
   font-family: Jura;
 }
 
+.window {
+  background: #FFFFFF;
+  height: 90%;
+  width: 90%;
+  border: 2px solid #58A4B0;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-right: 7%;
+  margin-left: 7%;
+
+}
+.header {
+  background-color: rgb(88, 164, 176);
+}
+.date {
+  color: white;
+  text-align: left;
+  font-size: 25px;
+  font-family: Jura;
+  padding: 15px;
+}
+.button {
+  background-image: url("/assets/plus.png");
+  height: 46px;
+  width: 47px;
+  border-radius: 20px;
+}
+.task-list {
+  width: 80%;
+  margin: 10px auto;
+  margin-top: 30px;
+}
+
+.whenNoTaskWindow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
