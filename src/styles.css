@@ -14,3 +14,11 @@ body, html {
   margin: 0;
   padding: 0;
 }
+
+app-root, app-main-page, app-background {
+  display: block;
+  height: 100%;
+}
+app-all-tasks {
+  flex-grow: 1;
+}

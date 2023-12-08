@@ -1,0 +1,132 @@
+.task-creation-window {
+  margin-top: 10px;
+  border: 1px #d2d2d2 solid;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.task-creation-window.focused {
+  border-color: grey;
+}
+input {
+  border: none;
+  margin-top: 5px;
+
+}
+input:focus {
+
+}
+input:focus {
+  outline: none; /* Убираем рамку при фокусе */
+}
+
+::placeholder {
+  color: grey;
+}
+.task-name::placeholder {
+  font-weight: bold;
+
+}
+.task-editor-editing-buttons {
+  margin-top:8px ;
+}
+.task-editor-editing-area {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+button {
+  padding: 5px;
+  color: #565656;
+  border: #cecece 1px solid;
+  border-radius: 7px;
+  background-color: inherit;
+}
+
+.cancel-button {
+  border: none;
+  color: black;
+  padding: 8px;
+  background-color: #f5f5f5;
+}
+.add-task-button {
+  margin-left:  5px;
+  border: none;
+  background-color: rgb(88, 164, 176);
+  color: white;
+  padding: 8px;
+}
+.task-editor-footer {
+  display: flex;
+  padding: 10px;
+  border-top: 1px #d2d2d2 solid;
+  justify-content: space-between;
+}
+
+.cancel-button {
+  border: none;
+  color: black;
+  padding: 8px;
+  background-color: #f5f5f5;
+}
+.add-task-button {
+  margin-left:  5px;
+  border: none;
+  background-color: rgb(88, 164, 176);
+  color: white;
+  padding: 8px;
+}
+
+.cancel-button:hover {
+  background-color: #dcdcdc;
+}
+.add-task-button:hover {
+  background-color: rgb(71, 147, 157);
+}
+
+.add-task-button:active {
+  transform: scale(0.95); /* Уменьшение размера при нажатии */
+  transition: all 0.1s ease;
+}
+
+.cancel-button:active {
+  transform: scale(0.95); /* Уменьшение размера при нажатии */
+  transition: all 0.1s ease;
+}
+.create-task-button {
+  margin-top: 10px;
+}
+.dropdown {
+  position: absolute;
+  border: 1px solid #cccccc;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 5px;
+  margin: 10px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+}
+.priority-name {
+  flex-grow: 1;
+}
+.dropdown .priority-item {
+  padding: 5px;
+  border-bottom: 1px solid #cccccc;
+  display: flex;
+}
+.dropdown div:last-child{
+  border-bottom: none;
+}
+.set-priority {
+  margin-left: 8px;
+  position: relative;
+}
+.set-priority:hover, .set-date:hover {
+  background-color: #f3f3f3;
+}

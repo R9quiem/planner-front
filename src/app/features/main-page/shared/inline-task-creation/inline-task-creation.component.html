@@ -1,0 +1,27 @@
+<button class = "create-task-button" *ngIf="!creatingTask" (click)="showTaskCreationWindow()">Создать задачу</button>
+<div class="task-creation-window" *ngIf="creatingTask" [class.focused]="isInputFocused">
+  <div class = "task-editor-editing-area">
+    <input class ="task-name" placeholder="Название задачи" (focus)="onInputFocus()" (blur)="onInputBlur()">
+    <input class ="task-description" placeholder="Описание" (focus)="onInputFocus()" (blur)="onInputBlur()">
+    <div class = "task-editor-editing-buttons">
+      <button class = "set-date">Срок выполнения</button>
+      <button class = "set-priority" (click)="toggleDropdown()">
+        <div class="selected-option">{{ selectedPriority || 'Select an option' }}</div>
+        <div class="dropdown" *ngIf="showDropdown">
+          <div class = "priority-item" *ngFor="let priority of priorities">
+            <span class = "priority-icon"></span>
+            <span class = "priority-name" (click)="selectPriority(priority)">{{ priority }}</span>
+          </div>
+        </div>
+      </button>
+
+    </div>
+  </div>
+  <div class = "task-editor-footer">
+    <button class ="set-project"></button>
+    <div class = "task-editor-buttons">
+      <button class = "cancel-button" (click)="closeTaskCreationWindow()">Отмена</button>
+      <button class = "add-task-button" >Добавить задачу</button>
+    </div>
+  </div>
+</div>

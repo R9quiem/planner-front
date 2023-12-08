@@ -10,27 +10,19 @@ import {AuthService} from "../../../auth/services/auth.service";
 })
 export class AllTasksComponent {
   tasks: any[] = [];
-  private backendUrl = 'http://localhost:8080/api/tasks';
-  constructor(private http: HttpClient, private authService: AuthService) {}
-  ngOnInit(): void {
-    this.loadTasks();
+  creatingTask:boolean = false;
+
+  constructor(
+    private http: HttpClient,
+    private authService: AuthService,
+    private taskService: TaskService
+  ) {}
+
+  ngOnInit() {
+    this.taskService.getTasks().subscribe(tasks => {
+      this.tasks = tasks;
+      console.log(tasks);
+    });
   }
 
-  loadTasks() {
-
-    this.http.get<any[]>(this.backendUrl).subscribe(
-      (data) => {
-        this.tasks = data;
-        console.log(this.tasks);
-      },
-      (error) => {
-        console.error('Error fetching tasks', error);
-        console.log(this.authService.getToken());
-      }
-    );
-  }
-
-  createTask() {
-
-  }
 }

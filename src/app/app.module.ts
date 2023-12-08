@@ -19,6 +19,10 @@ import { CalenderComponent } from './features/main-page/calender-page/calender.c
 import { ProjectComponent } from './features/main-page/categories-page/project.component';
 import { BackgroundComponent } from './features/main-page/shared/background/background.component';
 import {AuthInterceptor} from "./auth/util/AuthInterceptor";
+import {
+  TaskListItemComponent,
+} from './features/main-page/shared/task-list-item/task-list-item.component';
+import { InlineTaskCreationComponent } from './features/main-page/shared/inline-task-creation/inline-task-creation.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +40,8 @@ import {AuthInterceptor} from "./auth/util/AuthInterceptor";
     CalenderComponent,
     ProjectComponent,
     BackgroundComponent,
+    TaskListItemComponent,
+    InlineTaskCreationComponent,
   ],
   imports: [
     BrowserModule,

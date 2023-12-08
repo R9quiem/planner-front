@@ -1,8 +1,3 @@
-:host {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
 .window {
   background: #FFFFFF;
   height: 100%;
@@ -14,7 +9,7 @@
 
 }
 .header {
-  background: rgba(88, 164, 176, 0.85);
+  background-color: rgb(88, 164, 176);
 }
 .date {
   color: white;
@@ -23,3 +18,11 @@
   font-family: Jura;
   padding: 15px;
 }
+.task-list {
+  width: 80%;
+  margin: 10px auto;
+  margin-top: 30px;
+}
+
+
+

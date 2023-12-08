@@ -9,10 +9,7 @@ export class AuthInterceptor implements HttpInterceptor {
   constructor(private authService: AuthService) {}
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    // Получите токен из сервиса AuthService
     const token = this.authService.getToken();
-
-    // Если токен есть, добавьте его в заголовок Authorization
     if (token) {
       request = request.clone({
         setHeaders: {
@@ -20,7 +17,6 @@ export class AuthInterceptor implements HttpInterceptor {
         }
       });
     }
-    // Передайте обработанный запрос следующему обработчику
     return next.handle(request);
   }
 }

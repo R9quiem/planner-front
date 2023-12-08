@@ -1,0 +1,25 @@
+<div class="task-container">
+
+  <button class = "complete-task-button"
+          [ngClass]="{'red': taskPriority === 'HIGH',
+                   'orange': taskPriority === 'MEDIUM',
+                   'blue': taskPriority === 'LOW',
+                   }"></button>
+  <div class = "task-item-content">
+    <div class = "task-item-content-main">
+      <div class="task-name">{{ taskName }}</div>
+    </div>
+    <div class = task-item-info>
+      <div>
+        <div class="task-desc">{{ taskDescription }}</div>
+        <div class = "task-date">{{ taskDate }}</div>
+      </div>
+      <div class = "category-info" *ngIf="taskCategory!=null">
+        <div class="task-category" >{{ taskCategory }}</div>
+        <div class="hashtag-el">#</div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

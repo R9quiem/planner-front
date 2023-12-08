@@ -4,10 +4,15 @@
   </div>
   <div class = "task-list">
     <div *ngFor="let task of tasks">
-      <div>{{ task.name }}</div>
+      <app-task-list-item
+        [taskName]="task.name"
+        [taskDescription]="task.description"
+        [taskDate]="task.date"
+        [taskPriority] ="task.priority"
+        [taskState]="task.state"
+        [taskCategory]="task.category">
+      </app-task-list-item>
     </div>
-
-
-    <button (click)="createTask()">Создать задачу</button>
+    <app-inline-task-creation></app-inline-task-creation>
   </div>
 </div>

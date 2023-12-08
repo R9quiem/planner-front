@@ -1,0 +1,87 @@
+.task-container{
+  display: flex;
+  border-bottom: 2px solid #e7e7e7;
+  align-items: center;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.task-item-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+}
+.hashtag-el {
+  margin-left: 4px;
+  font-weight: bolder;
+  color: grey;
+}
+.task-desc,.task-date{
+  margin-top: 5px;
+  color: grey;
+}
+.category-info {
+  display: flex;
+  align-self: end;
+
+}
+.task-item-content{
+  width: 100%;
+  font-family: Segoe UI
+
+}
+.complete-task-button {
+  margin-top: 2px;
+  margin-right:8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid grey;
+  background-color: white;
+  align-self: start;
+
+}
+.task-item-content-main {
+  display: flex;
+}
+
+.complete-task-button:hover {
+  /*TODO: FIND BETTER IMG OF WING, THINNER*/
+  background: url("/assets/pngwing.png");
+  background-size: 10px,10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #e8e6e6;
+}
+
+
+.complete-task-button.red {
+  border: 2px solid #d1453b;
+  background-color: #fae4e4;
+}
+.complete-task-button.red:hover {
+  background-color: #fac1c1;
+}
+
+.complete-task-button.blue {
+  border: 2px solid #4249d5;
+  background-color: #e7f0ff;
+}
+.complete-task-button.blue:hover {
+  background-color: #c8d7ff;
+}
+
+.complete-task-button.orange {
+  border: 2px solid #e89d37;
+  background-color: #fff3e7;
+}
+.complete-task-button.orange:hover {
+  background-color: #ffdfc8;
+}
+.task-name {
+  font-size: 0.9em;
+}
+.task-desc {
+  font-size: 0.85em;
+}
+

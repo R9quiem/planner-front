@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {User} from "../models/user";
 import { Router } from '@angular/router';
-import {catchError, map, Observable, switchMap, tap} from "rxjs";
+import {BehaviorSubject, catchError, map, Observable, switchMap, tap} from "rxjs";
+import {ServiceTokenStorage} from "./token-storage.service";
 
 @Injectable({
   providedIn: 'root'
@@ -11,16 +12,21 @@ export class AuthService {
 
   private apiUrlReg = 'http://localhost:8080/api/auth/register';
   private apiUrlLog = 'http://localhost:8080/api/auth/login';
-  private currentUser: User | null = null;
-  constructor(private http: HttpClient) {
+  currentUser: BehaviorSubject<string | null> = new BehaviorSubject<string | null>(null);
+  constructor(private http: HttpClient, private serviceTokenStorage: ServiceTokenStorage) {
   }
   public getToken(): string | null {
-    return this.currentUser?.token || null;
+    return this.serviceTokenStorage.getToken();
+  }
+  public getUsername(): string {
+    return this.serviceTokenStorage.getUsername();
   }
 
   register(user: User): Observable<User> {
     return this.http.post<any>(this.apiUrlReg, user).pipe(
-      switchMap(() => this.login(user)), // Используем switchMap для перехода к логину после регистрации
+      switchMap(response => {
+        return this.login(user);
+      }),
       catchError(this.handleError)
     );
   }
@@ -28,7 +34,11 @@ export class AuthService {
   login(user: User): Observable<User> {
     return this.http.post<User>(this.apiUrlLog, user).pipe(
       map(responseUser => {
-        this.currentUser = responseUser;
+        if (responseUser.token) {
+          this.serviceTokenStorage.saveToken(responseUser.token);
+          this.serviceTokenStorage.saveUsername(responseUser.username);
+          this.currentUser.next(this.serviceTokenStorage.getUsername())
+        }
         return responseUser;
       }),
       catchError(this.handleError)
