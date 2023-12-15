@@ -23,6 +23,17 @@ import {
   TaskListItemComponent,
 } from './features/main-page/shared/task-list-item/task-list-item.component';
 import { InlineTaskCreationComponent } from './features/main-page/shared/inline-task-creation/inline-task-creation.component';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { ru_RU } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import ru from '@angular/common/locales/ru';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CustomSelectComponent } from './features/main-page/shared/custom-select/custom-select.component';
+import {NzSelectModule} from "ng-zorro-antd/select";
+import {NzIconModule} from "ng-zorro-antd/icon";
+
+registerLocaleData(ru);
+
 
 @NgModule({
   declarations: [
@@ -42,19 +53,24 @@ import { InlineTaskCreationComponent } from './features/main-page/shared/inline-
     BackgroundComponent,
     TaskListItemComponent,
     InlineTaskCreationComponent,
+    CustomSelectComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    NzSelectModule,
+    NzIconModule
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
       multi: true
-    }
+    },
+    { provide: NZ_I18N, useValue: ru_RU }
   ],
   bootstrap: [AppComponent]
 })

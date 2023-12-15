@@ -1,0 +1,26 @@
+<nz-select nzShowSearch nzAllowClear nzBorderless nzPlaceHolder="Выберите приоритет" [nzCustomTemplate]="customTemplate"
+           [(ngModel)]="selectedPriority"
+           (nzOpenChange)="updateSelectedPriorityColor()">
+  <nz-option nzCustomContent nzLabel="Высокий" nzValue="Высокий">
+    <span nz-icon nzType="flag" nzTheme="fill" style="color: #d1453b;"></span>
+    Высокий
+  </nz-option>
+  <nz-option nzCustomContent nzLabel="Средний" nzValue="Средний">
+    <span nz-icon nzType="flag" nzTheme="fill" style="color: #e89d37;"></span>
+    Средний
+  </nz-option>
+  <nz-option nzCustomContent nzLabel="Низкий" nzValue="Низкий">
+    <span nz-icon nzType="flag" nzTheme="fill" style="color: #4249d5;"></span>
+    Низкий
+  </nz-option>
+  <nz-option nzCustomContent  nzLabel="Без приоритета" nzValue="Без приоритета">
+    <span nz-icon nzType="flag" nzTheme="fill" style="color: transparent ;"></span>
+    Без приоритета
+  </nz-option>
+</nz-select>
+
+
+<ng-template #customTemplate >
+  <span nz-icon [nzType]="'flag'" [nzTheme]="'fill'" [style.color]="selectedPriorityColor"></span>
+  {{ selectedPriority }}
+</ng-template>

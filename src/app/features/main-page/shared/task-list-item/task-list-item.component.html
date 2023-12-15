@@ -1,6 +1,5 @@
-<div class="task-container">
-
-  <button class = "complete-task-button"
+<div *ngIf="taskState!=='DONE' " class="task-container">
+  <button (click)="completeTask()" class = "complete-task-button"
           [ngClass]="{'red': taskPriority === 'HIGH',
                    'orange': taskPriority === 'MEDIUM',
                    'blue': taskPriority === 'LOW',
@@ -21,5 +20,4 @@
     </div>
 
   </div>
-
 </div>

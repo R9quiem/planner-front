@@ -22,3 +22,6 @@ app-root, app-main-page, app-background {
 app-all-tasks {
   flex-grow: 1;
 }
+button {
+cursor: pointer;
+}

@@ -19,6 +19,7 @@ export class TodayComponent {
     this.isZeroTasks = true;
   }
   tasks: any[] = [];
+  priority: any;
 
   constructor(
     private http: HttpClient,
@@ -29,6 +30,7 @@ export class TodayComponent {
   ngOnInit() {
     this.taskService.getTasks().subscribe(tasks => {
       this.tasks = tasks;
+      console.log(tasks);
       if(tasks.length>0)
         this.isZeroTasks = false;
       else

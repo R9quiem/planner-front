@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {AuthService} from "../../../../auth/services/auth.service";
-import {Observable} from "rxjs";
+import {catchError, Observable, throwError} from "rxjs";
+import {Task} from "../models/Task";
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +11,8 @@ export class TaskService {
 
   private backendUrl = 'http://localhost:8080/api';
   constructor(private http: HttpClient, private authService: AuthService) {}
-  getTasks(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.backendUrl}/tasks`);
+  getTasks(): Observable<Task[]> {
+    return this.http.get<Task[]>(`${this.backendUrl}/tasks`);
   }
 
   getTaskById(id: number): Observable<any> {
@@ -22,7 +23,7 @@ export class TaskService {
     return this.http.post<any>(`${this.backendUrl}/task`, taskData);
   }
 
-  updateTask(id: number, updatedTaskData: any): Observable<any> {
+  updateTask(id: number , updatedTaskData: any): Observable<any> {
     return this.http.put<any>(`${this.backendUrl}/task/${id}`, updatedTaskData);
   }
 
