@@ -17,6 +17,15 @@ button {
   margin-bottom: 20px;
 }
 
+button:hover {
+  background-color: rgb(71, 147, 157);
+}
+
+button:active {
+  transform: scale(0.95); /* Уменьшение размера при нажатии */
+  transition: all 0.1s ease;
+}
+
 
 input {
   border-radius: 5px;

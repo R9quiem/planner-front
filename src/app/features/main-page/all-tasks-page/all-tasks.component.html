@@ -1,7 +1,8 @@
 <div class = "window">
-  <div class = "header">
-    <div class="date">2 ноября, четверг</div>
-  </div>
+  <header>
+    <div class="date">{{this.datePipe.transform(Date(), 'dd MMM')}}</div>
+    <div>f</div>
+  </header>
   <div class = "task-list">
     <div *ngFor="let task of tasks">
       <app-task-list-item
@@ -14,7 +15,17 @@
         [taskCategory]="task.category">
       </app-task-list-item>
     </div>
-    <app-inline-task-creation></app-inline-task-creation>
+    <div *ngIf="isZeroTasks" class ="whenNoTaskWindow">
+      <img src="/assets/todo.jpg" alt="">
+      <p>План на день - это список ваших дел на любой день</p>
+      <button (click)="showTaskCreationWindow()" class="image-button-item">
+        <div class = "ellipse-img">
+          <div class = "plus-img"></div>
+        </div>
+      </button>
+      <p>Нажмите + для добавления задачи на сегодня</p>
 
+    </div>
+    <app-inline-task-creation *ngIf="!isZeroTasks"></app-inline-task-creation>
   </div>
 </div>

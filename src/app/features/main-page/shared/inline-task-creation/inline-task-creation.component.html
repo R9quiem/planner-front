@@ -4,14 +4,18 @@
     <input class ="task-name" placeholder="Название задачи" [(ngModel)]="taskName" (focus)="onInputFocus()" (blur)="onInputBlur()">
     <input class ="task-description" placeholder="Описание" [(ngModel)]="taskDescription" (focus)="onInputFocus()" (blur)="onInputBlur()">
     <div class = "task-editor-editing-buttons">
-      <button class = "set-date">Срок выполнения</button>
+
+      <app-custom-select-category (onChanged)="handleCategoryChange($event)"></app-custom-select-category>
       <app-custom-select (onChanged)="handlePriorityChange($event)"></app-custom-select>
 
 
     </div>
   </div>
   <div class = "task-editor-footer">
-    <button class ="set-project"></button>
+    <div>
+      <nz-date-picker nzMode="date" [(ngModel)]="taskDate" (ngModelChange)="onChange($event)"></nz-date-picker>
+      <nz-time-picker [(ngModel)]="taskTime" [nzDefaultOpenValue]="defaultOpenValue"></nz-time-picker>
+    </div>
     <div class = "task-editor-buttons">
       <button class = "cancel-button" (click)="closeTaskCreationWindow()">Отмена</button>
       <button class = "add-task-button" (click)="createTask()"> Добавить задачу</button>

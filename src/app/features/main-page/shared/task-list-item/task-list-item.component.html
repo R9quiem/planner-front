@@ -1,17 +1,26 @@
-<div *ngIf="taskState!=='DONE' " class="task-container">
-  <button (click)="completeTask()" class = "complete-task-button"
+<div *ngIf="taskState!=='DONE'"
+     class="task-container"
+     (mouseenter)="showAdditionalButtons = true"
+     (mouseleave)="showAdditionalButtons = false">
+  <button (mouseenter)="showCheckIcon = true"
+          (mouseleave)="showCheckIcon = false"
+          (click)="completeTask()"
+          class = "complete-task-button"
           [ngClass]="{'red': taskPriority === 'HIGH',
                    'orange': taskPriority === 'MEDIUM',
                    'blue': taskPriority === 'LOW',
-                   }"></button>
+                   }"><span class = "checkIcon" *ngIf="showCheckIcon" nz-icon nzType="check" nzTheme="outline"></span></button>
   <div class = "task-item-content">
     <div class = "task-item-content-main">
-      <div class="task-name">{{ taskName }}</div>
+      <div class="task-name">{{ taskName }} </div>
+      <div class = "additional-buttons" *ngIf="showAdditionalButtons">
+        <button class = "deleteTaskButton" (click)="deleteTask()"><span nz-icon nzType="delete" nzTheme="outline"></span></button>
+      </div>
     </div>
     <div class = task-item-info>
       <div>
         <div class="task-desc">{{ taskDescription }}</div>
-        <div class = "task-date">{{ taskDate }}</div>
+        <div class = "task-date">{{ this.datePipe.transform(this.taskDate, 'dd MMM')}}</div>
       </div>
       <div class = "category-info" *ngIf="taskCategory!=null">
         <div class="task-category" >{{ taskCategory }}</div>

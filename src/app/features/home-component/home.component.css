@@ -64,7 +64,7 @@ header {
   margin: 1px ;
   padding: 12px;
   border: none;
-  width: 100px;
+  width: 120px;
   border-radius: 20px;
   text-decoration: none;
   font-family: Jura;
@@ -143,5 +143,15 @@ a{
   height: 100%;
 }
 .border {
+
+}
+
+a:hover {
+  background-color: rgb(71, 147, 157);
+}
+
+a:active {
+  transform: scale(0.95); /* Уменьшение размера при нажатии */
+  transition: all 0.1s ease;
 
 }

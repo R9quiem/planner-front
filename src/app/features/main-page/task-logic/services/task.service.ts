@@ -8,8 +8,9 @@ import {Task} from "../models/Task";
   providedIn: 'root'
 })
 export class TaskService {
-
   private backendUrl = 'http://localhost:8080/api';
+
+  public categories: string[] = ["Работа","Дом","Фитнес", "Отдых"];
   constructor(private http: HttpClient, private authService: AuthService) {}
   getTasks(): Observable<Task[]> {
     return this.http.get<Task[]>(`${this.backendUrl}/tasks`);

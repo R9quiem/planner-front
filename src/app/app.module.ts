@@ -28,10 +28,14 @@ import { ru_RU } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import ru from '@angular/common/locales/ru';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CustomSelectComponent } from './features/main-page/shared/custom-select/custom-select.component';
+import { CustomSelectComponent } from './features/main-page/shared/custom-select-priority/custom-select.component';
 import {NzSelectModule} from "ng-zorro-antd/select";
 import {NzIconModule} from "ng-zorro-antd/icon";
-
+import { CustomSelectCategoryComponent } from './features/main-page/shared/custom-select-category/custom-select-category.component';
+import {NzDatePickerModule} from "ng-zorro-antd/date-picker";
+import {NzTimePickerModule} from "ng-zorro-antd/time-picker";
+import {NzMenuModule} from "ng-zorro-antd/menu";
+import { DatePipe } from '@angular/common';
 registerLocaleData(ru);
 
 
@@ -54,6 +58,7 @@ registerLocaleData(ru);
     TaskListItemComponent,
     InlineTaskCreationComponent,
     CustomSelectComponent,
+    CustomSelectCategoryComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,16 +67,25 @@ registerLocaleData(ru);
     FormsModule,
     BrowserAnimationsModule,
     NzSelectModule,
-    NzIconModule
+    NzIconModule,
+    NzDatePickerModule,
+    NzTimePickerModule,
+    NzMenuModule
   ],
   providers: [
     {
+
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
       multi: true
     },
-    { provide: NZ_I18N, useValue: ru_RU }
-  ],
+    {
+      provide: NZ_I18N, useValue: ru_RU
+    },
+    {
+      provide: DatePipe
+    }
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

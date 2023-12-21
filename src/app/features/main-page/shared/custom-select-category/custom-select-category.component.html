@@ -1,0 +1,8 @@
+<nz-select nzShowSearch nzAllowClear nzBorderless nzPlaceHolder="Выберите категорию"
+           [(ngModel)]="selectedCategory"
+           (nzOpenChange)="updateSelectedCategory()">
+  <nz-option *ngFor="let category of this.taskService.categories" nzCustomContent nzLabel="{{category}}" nzValue="{{category}}">
+    {{category}}
+  </nz-option>
+
+</nz-select>

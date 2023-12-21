@@ -63,6 +63,7 @@ button {
   padding: 10px;
   border-top: 1px #d2d2d2 solid;
   justify-content: space-between;
+  align-items: center;
 }
 
 .cancel-button {
@@ -129,4 +130,13 @@ button {
 }
 .set-priority:hover, .set-date:hover {
   background-color: #f3f3f3;
+}
+nz-date-picker, nz-time-picker {
+  margin-left: 10px;
+}
+.create-task-button:hover {
+  background-color: #f3f3f3;
+}
+.create-task-button:active {
+  scale: 95%;
 }

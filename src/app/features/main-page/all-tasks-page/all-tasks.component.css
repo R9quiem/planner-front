@@ -1,16 +1,15 @@
 .window {
   background: #FFFFFF;
-  height: 90%;
-  width: 90%;
+  height: 100%;
+  width: 100%;
   border: 2px solid #58A4B0;
-  border-radius: 10px;
-  margin-top: 20px;
-  margin-right: 7%;
-  margin-left: 7%;
 
 }
-.header {
+header {
   background-color: rgb(88, 164, 176);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .date {
   color: white;
@@ -31,5 +30,45 @@
   margin-top: 30px;
 }
 
+.whenNoTaskWindow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+}
+nz-select {
+  width: 200px;
+}
 
+.whenNoTaskWindow p {
+  margin-top: 10px;
+  color: black;
+  font-size: 25px;
+  font-family: Jura;
+  font-weight: 700;
+  word-wrap: break-word
+}
+.whenNoTaskWindow button {
+  background-color: inherit;
+  border: none;
+
+}
+.ellipse-img {
+  background-image: url("/assets/Ellipse.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+.plus-img {
+  background-image: url("/assets/Plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 90px;
+  height: 90px;
+}
+.whenNoTaskWindow button:hover {
+  scale: 95%;
+}
+.whenNoTaskWindow button:active {
+
+}

@@ -23,10 +23,10 @@
 .category-info {
   display: flex;
   align-self: end;
-
 }
 .task-item-content{
   width: 100%;
+
   font-family: Segoe UI
 
 }
@@ -43,17 +43,19 @@
 }
 .task-item-content-main {
   display: flex;
+  justify-content: space-between;
+  height: 22px;
 }
 
 .complete-task-button:hover {
-  /*TODO: FIND BETTER IMG OF WING, THINNER*/
-  background: url("/assets/pngwing.png");
   background-size: 10px,10px;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #e8e6e6;
 }
-
+.checkIcon {
+  position: relative; top: -4px; left: -3px; font-size: 11px;
+}
 
 .complete-task-button.red {
   border: 2px solid #d1453b;
@@ -83,5 +85,19 @@
 }
 .task-desc {
   font-size: 0.85em;
+}
+.additional-buttons {
+  align-self: start;
+}
+.right-area {
+  height: 100%;
+
+}
+.deleteTaskButton {
+  background-color: inherit;
+  border: none;
+  border-radius: 5px;
+  scale: 120%;
+  padding-right: 0;
 }
 
