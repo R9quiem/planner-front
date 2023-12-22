@@ -36,6 +36,8 @@ import {NzDatePickerModule} from "ng-zorro-antd/date-picker";
 import {NzTimePickerModule} from "ng-zorro-antd/time-picker";
 import {NzMenuModule} from "ng-zorro-antd/menu";
 import { DatePipe } from '@angular/common';
+import {NzCalendarModule} from "ng-zorro-antd/calendar";
+import {NzBadgeModule} from "ng-zorro-antd/badge";
 registerLocaleData(ru);
 
 
@@ -70,7 +72,9 @@ registerLocaleData(ru);
     NzIconModule,
     NzDatePickerModule,
     NzTimePickerModule,
-    NzMenuModule
+    NzMenuModule,
+    NzCalendarModule,
+    NzBadgeModule
   ],
   providers: [
     {

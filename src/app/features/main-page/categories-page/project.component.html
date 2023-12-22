@@ -2,12 +2,15 @@
   <div class="header">
     <div class="date">Категории</div>
   </div>
-  <div *ngFor="let category of this.taskService.categories">
-    <div class = "category-item" (click)="selectCategory(category)">{{category}}</div>
+  <div class = "main">
+    <div class = "category-list">
+      <div *ngFor="let category of this.taskService.categories">
+        <div class = "category-item" (click)="selectCategory(category)">{{category}}</div>
+      </div>
+    </div>
+    <div class = "task-list">
+      {{selectedCategory}}
+    </div>
   </div>
 </div>
-<div class="list1">
-  <div class="header">
-    <div class="date">{{selectedCategory}}</div>
-  </div>
-</div>
+
