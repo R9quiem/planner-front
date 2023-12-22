@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+//разбор
 @Component({
   selector: 'app-task-list',
   templateUrl: './task-list.component.html',
